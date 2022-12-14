@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %} 
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+{% endblock %}
+
+{% block content %}
+
+{% include 'home/components/header.html' %}
+<section class="hero">
+    <div class="hero__content">
+      <span class="hero__title">M4Concept</span>
+      <h3 class="hero__description">Société de prestations de services aux Entreprises</h3>
+      <a href="/contact-us" class="btn">Contactez Nous</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+  <div class="sidebyside_element">
+    <div class="side__image" data-aos="fade-right">
+      
+      <img src="{% static 'home/assets/images/Law firm-pana.svg' %}" alt="logo M4 Concept" />
+    </div>
+    <div class="side__content" data-aos="zoom-in-left">
+      <h3 class="side__title">Qui Sommes-Nous ?</h3>
+        <p class="side__description"> M4 Concept est une entreprise de droits congolais, qui
+        évolue dans les prestations des services nous offrons une large
+        gamme de service pour une clientéle diversifiée, que vous soyez une
+        entreprise ou un particulier. Nous mettons un point d'honneur à
+        répondre au mieux a tous les besions de nos clients, en leur offrant
+        des prix compétitifs qui respectent leur budget et en les
+        satisfaisant avec le meilleur service du marché</p>
+      <a href="{% url 'home:about-us' %}" class="btn">Savoir plus</a>
+      <br>
+    </div>
+  </div>
+
+  <div class="sidebyside_element">
+    
+    <div class="side__content" data-aos="zoom-in-left">
+      <h3 class="side__title">Nos Valeurs</h3>
+      <p class="side__description">Le savoir être ,le savoir-faire ,l'efficaté , la fiabilité et la rigueur 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aliquid amet aliquam ea esse? Unde quam quasi tempora cum voluptates?</p>
+    </div>
+    <div class="side__image" data-aos="fade-right">
+      <img src="{% static 'home/assets/images/Law firm-bro.svg' %}" alt=""></img>
+    </div>
+
+  </div>
+
+  <div class="sidebyside_element">
+    <div class="side__image" data-aos="fade-right">
+      <img src="{% static 'home/assets/images/Goal-bro.svg' %}" alt=""></img> 
+    </div>
+    <div class="side__content" data-aos="zoom-in-left">
+      <h3 class="side__title">Notre Mission</h3>
+      <ul class="side__list">
+        <li class="side__list_item">Apporter des solutions aux problèmes de notre client</li>
+        <br />
+        <li class="side__list_item">Apporter un soutien professionnel à nos clients</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="services" id="services">
+  <h1 class="heading">Nos <span class="heading--primary">services</span></h1>
+
+<div class="grid grid--autofit-30 grid--gap-2">
+    <div class="box">
+      <img class="service__image" src="{% static 'home/assets/images/jardinier.jfif' %}" alt="">
+      <h3 class="service__title">Entretien D'espace vert </h3>
+    </div>
+
+    <div class="box">
+      <img class="service__image" src="{% static 'home/assets/images/cleaner.jfif' %}" alt="">
+      <h3 class="service__title">Technicienne de Surface</h3>
+    </div>
+    <div class="box">
+      <img class="service__image" src="{% static 'home/assets/images/téléchargement.jfif' %}" alt="">
+      <h3 class="service__title">Agent de securité </h3>
+    </div>
+
+    <div class="box">
+      <img class="service__image" src="{% static 'home/assets/images/market.jfif' %}" alt="">
+      <h3 class="service__title">Gestion de projet </h3>
+    </div>
+
+    <div class="box">
+      <img class="service__image" src="{% static 'home/assets/images/informatique.jfif' %}" alt="">
+      <h3 class="service__title">Informatique</h3>
+    </div>
+    <div class="box">
+      <img class="service__image" src="{% static 'home/assets/images/market2.jfif' %}" alt="">
+      <h3 class="service__title">Etude du marché </h3>
+    </div>
+
+</div>
+</section>
+<section  id="work">
+  <h1 class="heading">Notre <span class="heading--primary">Travail</span></h1>
+
+  <div class="image_grid ">
+    <img src="{% static 'home/assets/images/cleaner.jfif' %}" alt="" data-aos="fade-right">
+    <img src="{% static 'home/assets/images/jardinier.jfif ' %}" alt="" data-aos="zoom-in-left">
+    <img src="{% static 'home/assets/images/m45.jpg' %}" alt="" data-aos="fade-right">
+    <img src="{% static 'home/assets/images/informatique2.jfif' %}" alt=""data-aos="zoom-in-left">
+    <img src="{% static 'home/assets/images//jardinier2.jfif'  %}" alt="" data-aos="fade-right">
+    <img src="{% static 'home/assets/images/images.jfif' %}" alt="" data-aos="zoom-in-left">
+    <img src="{% static 'home/assets/images/market.jfif' %}" alt="" data-aos="fade-right">
+    <img src="{% static 'home/assets/images/m46.jpg'  %}" alt="" data-aos="fade-right">
+    <img src="{% static 'home/assets/images/informatique.jfif'  %}" alt="" data-aos="zoom-in-left">
+    <img src="{% static 'home/assets/images/market2.jfif'  %}" alt="" data-aos="fade-right">
+  </div>
+</section>
+
+
+<section  class="partners" id="products">
+  <h1 class="heading">Nos <span class="heading--primary">Partenaires</span></h1>
+
+  <div class="swiper partners-slider ">
+    <div class="swiper-wrapper" >
+
+      <div class="swiper-slide slider" data-product="product-1">
+        <img src="{% static 'home/assets/images/bralico.jpg'  %}" alt="" />
+      </div>
+
+      <div class="swiper-slide slider" data-product="product-2">
+        <img src="{% static 'home/assets/images/brasco.jpg'  %}" alt="" />
+      </div>
+
+      <div class="swiper-slide slider" data-product="product-3">
+        <img src="{% static 'home/assets/images/tractafric.jpg' %}" alt="" />
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+
+   {% include  'home/components/footer.html' %}
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+  AOS.init();
+</script>
+{% endblock %}

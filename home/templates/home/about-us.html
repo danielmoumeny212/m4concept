@@ -1,0 +1,110 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+{% endblock %} {%block content %} {% include 'home/components/header.html' %}
+<section class="hero hero--small"></section>
+
+<section>
+  <h1 class="heading">
+    Pourquoi nous faire <span class="heading--primary">Confiance ?</span>
+  </h1>
+  <div class="container container--center">
+    <p class="container__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi voluptas
+      impedit delectus modi consectetur necessitatibus nulla nihil, repellendus
+      autem.
+    </p>
+  </div>
+</section>
+<section>
+  <h1 class="heading">Notre <span class="heading--primary">Slogan</span></h1>
+  <div class="container container--center">
+    <p class="container__text">
+      savoir être, savoir faire, l’éfficacité, la rigueur sont nos valeurs
+    </p>
+  </div>
+</section>
+
+<section class="legal-info">
+  <h1 class="heading">Informations</h1>
+  <div class="legal-container">
+    <div class="legal-box">
+      <h2>DATE DE CREATION</h2>
+      <p>2017</p>
+    </div>
+    <div class="legal-box">
+      <h2>SARL</h2>
+      <p>Capital: 10<span>M</span></p>
+    </div>
+    <div class="legal-box">
+      <h2>RCCM</h2>
+      <p>16B1166</p>
+    </div>
+    <div class="legal-box">
+      <h2>NUI</h2>
+      <p>M2016110000997178</p>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="grid grid--autofit-20 grid--gap-1">
+    <div class="team__card">
+      
+        <img src="{% static 'home/assets/images/value.png' %}" alt="" />
+      
+      <div class="team__card-title">
+        <h2>Lorem, ipsum.</h2>
+        <h3 class="card_subtitle">Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
+    </div>
+
+    <div
+      class="team__card team__card--text"
+      style="background: rgb(101, 218, 91)"
+    >
+      <h1>NOTRE EQUIPE</h1>
+      <p class="card_subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga fugit
+        deserunt voluptates necessitatibus reprehenderit! Aliquid soluta
+        similique mollitia excepturi facere at ullam cumque deleniti porro,
+        molestiae veritatis, et sed reiciendis.
+      </p>
+    </div>
+
+    <div class="team__card">
+      <img src="{% static 'home/assets/images/testimonial.jpg' %}" alt="" />
+      <div class="team__card-title">
+        <h2>Lorem, ipsum.</h2>
+        <h3 class="card_subtitle">Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
+    </div>
+
+    <div class="team__card">
+      <img src="{% static 'home/assets/images/testimonial.jpg' %}" alt="" />
+      <div class="team__card-title">
+        <h2>Lorem, ipsum.</h2>
+        <h3 class="card_subtitle">Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location">
+  <h1 class="heading">Nos branches</h1>
+
+  <div class="location-container">
+    <div class="location-box">
+      <div class="location-icon fas fa-warehouse"></div>
+      <h2>Pointe noire</h2>
+    </div>
+    <div class="location-box">
+      <div class="location-icon fas fa-warehouse"></div>
+      <h2>Brazzaville</h2>
+    </div>
+  </div>
+</section>
+
+{% include 'home/components/footer.html' %} {% endblock%}

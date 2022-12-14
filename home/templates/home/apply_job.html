@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% block head %} {% endblock %} 
+{% block content %} 
+{%include 'home/components/header.html' %}
+
+<section class="">
+  <h3 class="heading">Postulez</h3>
+  <form method="post" class="box form" enctype="multipart/form-data" >
+    <p class="text-action"></p>
+    <div class="load"></div>
+    {% csrf_token %} 
+    {{ form.last_name }} 
+    {{ form.email }} 
+    {{ form.first_name }}
+    {{ form.offer }}
+    {{ form.cellphone }} 
+    {{ form.content }}
+    <div style="text-align: left">{{ form.cv }}</div>
+    <input type="submit" value="Envoyez" class="btn" />
+  </form>
+</section>
+{% include 'home/components/footer.html' %} {% endblock %}

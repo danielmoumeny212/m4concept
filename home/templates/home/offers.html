@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% load static %} {% block head %} {% endblock %}
+{%block content %} 
+{% include 'home/components/header.html' %}
+
+<section class="hero hero--small">
+  <div class="hero__content">
+    <h3 class="hero__description">Nos Offres</h3>
+  </div>
+</section>
+
+{% if offers %}
+<section class="offer_section card">
+  <h1 class="heading">
+    Postuler a nos <span class="heading--primary">offres d'emploi</span>
+  </h1>
+  {% for offer in offers %}
+  <div class="offer">
+    <h2 class="offer__heading">
+      Post : <strong>{{ offer.searching_for }}</strong>
+    </h2>
+    <h2 class="offer__heading offer__heading--sm">
+      type de contrat: <strong>{{ offer.contract }} </strong>
+    </h2>
+    <div class="offer__description">{{ offer.description|safe }}</div>
+    <div class="offer__description">
+      {{ offer.looking_for|safe }}
+    </div>
+    <span class="offer__subtitle"
+      >experience : <strong>{{ offer.experience }} </strong>
+    </span>
+    <span class="offer__subtitle"
+      >nombre de poste: <strong>{{ offer.post_number }}</strong></span
+    >
+    <span class="offer__subtitle"
+      >Region: <strong>{{ offer.region }}</strong></span
+    >
+    <div class="btn__container">
+      <a href="{% url 'home:apply' slug=offer.slug %}" class="btn">postuler</a>
+    </div>
+    <div class="offer__endline"></div>
+  </div>
+  {% endfor %}
+</section>
+<section></section>
+{% else %}
+<section class="heading">Aucune offre Disponible</section>
+
+<section class="home"></section>
+<section class="home"></section>
+{% endif %} 
+{% include 'home/components/footer.html' %} 
+{% endblock%}

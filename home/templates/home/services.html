@@ -1,0 +1,91 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+{% endblock %} {% block content %} {% include 'home/components/header.html' %}
+
+<section>
+  <div class="swiper services-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide">
+        <img src="{% static 'home/assets/images/m43.jpg' %}" />
+      </div>
+      <div class="swiper-slide slide">
+        <img src="{% static 'home/assets/images/m45.jpg' %}" />
+      </div>
+      <div class="swiper-slide slide">
+        <img src="{% static 'home/assets/images/m42.jpg' %}" />
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<section class="card testimonial">
+  <div class="grid grid--1x2">
+    <div class="testimonial__image">
+      <img src="{% static 'home/assets/images/value.jpg' %}" alt="" />
+      <div class="icon-container icon-container--accent">
+        <img
+          class="icon icon--small icon--white"
+          src="{% static 'home/assets/icons/quotes.svg' %}"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <blockquote class="quote">
+      <p class="quote__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+        aspernatur reiciendis sapiente neque eaque rem officia totam ex numquam
+        earum accusamus, aliquid labore quas recusandae! Dolorum, laborum quidem
+        blanditiis ipsam ratione sit dignissimos odit facilis quos perferendis
+        laboriosam esse cum?
+      </p>
+
+      <footer>
+        <div class="media">
+          <div class="media__image">
+            <img
+              class="icon icon--primary quote__line"
+              src="{% static 'home/assets/icons/line.svg' %}"
+              alt=""
+            />
+          </div>
+          <div class="media__body">
+            <h3 class="media__title quote__author">John Smith</h3>
+            <p class="quote__organization">M4 Concept</p>
+          </div>
+        </div>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+<section>
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio natus
+    assumenda ipsum eius itaque cumque expedita aut, vitae, vel aliquid at
+    animi? Esse cum placeat, quasi incidunt perferendis numquam ullam?
+  </div>
+</section>
+
+{% include 'home/components/footer.html' %}
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".services-slider", {
+    spaceBetween: 20,
+    effect: "fade",
+    autoplay: true,
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+{% endblock %}

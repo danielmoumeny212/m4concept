@@ -1,0 +1,11 @@
+{% include 'home/components/mail_style.html' %}
+<h2 class="heading"> Soumission du formulaire de contact<h2>
+<p><b>Nom: </b>{{ name }}</p>
+<p><b>Objet: </b>{{ subject }}</p>
+<p><b>E-mail: </b>{{ email }}</p>
+<p><b>Telephone: </b>0{{ cellphone }}</p>
+<div class="message">
+  <p> {{ content }}</p>
+</div> 
+<a href="mailto:{{ email }}" class="btn">Repondre</a>
+</center>

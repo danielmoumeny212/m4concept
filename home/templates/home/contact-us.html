@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% load static %} {% block head %} {% endblock %}
+{%block content %} {% include 'home/components/header.html' %}
+
+<section class="contact" id="contact">
+  <h1 class="heading">Nous<span class="heading--primary"> Contactez</span></h1>
+
+  <div class="row">
+    <div class="contact__container">
+      <div class="contact__box">
+        <h3 class="contact__title">Contact info</h3>
+        <p class="contact__info">
+          <span class="fa fa-map-marker"></span>Centre Ville, Pointe-Noire
+        </p>
+        <p class="contact__info">
+          <span class="fas fa-envelope"></span
+          ><a href="mailto:contact@m4concept.net">contact@m4concept.net</a>
+        </p>
+        <p class="contact__info">
+          <span class="fas fa-phone-alt"></span>
+          <a href="tel:+242067703164">+242067703164 &nbsp; | &nbsp; </a>
+          <a href="tel:+242056398383">+242056398383</a>
+        </p>
+      </div>
+
+      <div class="contact__box">
+        <h3 class="contact__title">localisation</h3>
+        <iframe
+          class="contact__frame"
+          src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4001.6427813463424!2d11.852164559693419!3d-4.817502396489652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m3!3m2!1d-4.818531999999999!2d11.854798299999999!4m0!5e0!3m2!1sfr!2scg!4v1668855209748!5m2!1sfr!2scg"
+          style="border: 0"
+          allowfullscreen=""
+          title="myframe"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </div>
+    <form method="post" class="form">
+      <h3>Envoyez un Mail</h3>
+      <p class="text-action"></p>
+      <div class="load"></div>
+      {% csrf_token %} 
+      {{ form.name }} 
+      {{ form.email }} 
+      {{ form.cellphone }} 
+      {{ form.content }}
+      <input type="submit" value="Envoyez" class="btn" />
+    </form>
+  </div>
+</section>
+
+{% include 'home/components/footer.html' %} {% endblock%}

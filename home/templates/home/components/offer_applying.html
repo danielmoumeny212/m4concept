@@ -1,0 +1,13 @@
+{% include 'home/components/mail_style.html' %}
+<body>
+
+<h2 class="heading "> Postulation pour le poste : {{ post }} <h2>
+    <p ><b>Nom: </b>{{ last_name }}</p>
+    <p ><b>Prenom: </b>{{ first_name }}</p>
+    <p ><b>E-mail: </b>{{ email }}</p>
+    <p ><b>Telephone:</b>0{{ cellphone }}</p>
+    <div class="message">
+      <p> {{ content }}</p>
+    </div> 
+    <a href="mailto:{{ email }}" class="btn"> Repondre </a>
+</body> 

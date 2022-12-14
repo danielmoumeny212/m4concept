@@ -1,0 +1,26 @@
+{% load static %}
+<header class="header" data-aos="menu-area" >
+  <div class="logo">
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/Logo validé.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/Logo validé.png' %}"
+      />
+      <img src="{% static 'home/assets/images/Logo validé.png' %}" alt="M4 Logo" class="" />
+    </picture>
+  </div>
+  <nav class="navbar">
+    <a href="{% url 'home:index'%}" class="nav__item">accueil</a>
+    <a href="{% url 'home:about-us' %}" class="nav__item">qui somme nous</a>
+    <a href="{% url 'home:services' %}" class="nav__item">services</a>
+    <a href="{% url 'home:offer' %}" class="nav__item">nos offres</a>
+    <a href="{% url 'home:contact-us' %}" class="nav__item">Contact</a>
+  </nav>
+  <img src="{% static 'home/assets/icons/menu.svg' %} " alt="menu bar bouton " id="menu-btn" />
+  <div class="scroll-indicator"></div>
+  
+</header>
