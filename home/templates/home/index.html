@@ -23,7 +23,7 @@
   <div class="sidebyside_element">
     <div class="side__image" data-aos="fade-right">
       
-      <img src="{% static 'home/assets/images/Law firm-pana.svg' %}" alt="logo M4 Concept" />
+      <img src="{% static 'home/assets/images/svg/Law firm-pana.svg' %}" alt="" />
     </div>
     <div class="side__content" data-aos="zoom-in-left">
       <h3 class="side__title">Qui Sommes-Nous ?</h3>
@@ -47,14 +47,14 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aliquid amet aliquam ea esse? Unde quam quasi tempora cum voluptates?</p>
     </div>
     <div class="side__image" data-aos="fade-right">
-      <img src="{% static 'home/assets/images/Law firm-bro.svg' %}" alt=""></img>
+      <img src="{% static 'home/assets/images/svg/Law firm-bro.svg' %}" alt=""></img>
     </div>
 
   </div>
 
   <div class="sidebyside_element">
     <div class="side__image" data-aos="fade-right">
-      <img src="{% static 'home/assets/images/Goal-bro.svg' %}" alt=""></img> 
+      <img src="{% static 'home/assets/images/svg/Goal-bro.svg' %}" alt=""></img> 
     </div>
     <div class="side__content" data-aos="zoom-in-left">
       <h3 class="side__title">Notre Mission</h3>
@@ -74,31 +74,94 @@
 
 <div class="grid grid--autofit-30 grid--gap-2">
     <div class="box">
-      <img class="service__image" src="{% static 'home/assets/images/jardinier.jfif' %}" alt="">
-      <h3 class="service__title">Entretien D'espace vert </h3>
+      <picture >
+        <source 
+          type="image/webp"
+          srcset = "{% static 'home/assets/images/webp/jardinier.webp' %}"
+        />
+        <source 
+          type="image/jfif"
+          srcset = "{% static 'home/assets/images/jardinier.jfif' %}"
+        />
+        <img class="service__image" src="{% static 'home/assets/images/jardinier.jfif' %}" alt="">
+      </picture>
+      
+      <p class="service__title">Entretien D'espace vert </p>
     </div>
 
     <div class="box">
-      <img class="service__image" src="{% static 'home/assets/images/cleaner.jfif' %}" alt="">
-      <h3 class="service__title">Technicienne de Surface</h3>
+      <picture >
+        <source 
+          type="image/webp"
+          srcset = "{% static 'home/assets/images/webp/cleaner.webp' %}"
+        />
+        <source 
+          type="image/jfif"
+          srcset = "{% static 'home/assets/images/cleaner.jfif' %}"
+        />
+        <img class="service__image" src="{% static 'home/assets/images/cleaner.jfif' %}" alt="">
+      </picture>
+      
+      <p class="service__title">Technicienne de Surface</p>
     </div>
     <div class="box">
-      <img class="service__image" src="{% static 'home/assets/images/téléchargement.jfif' %}" alt="">
-      <h3 class="service__title">Agent de securité </h3>
+      <picture >
+        <source 
+          type="image/webp"
+          srcset = "{% static 'home/assets/images/webp/téléchargement.webp' %}"
+        />
+        <source 
+          type="image/jfif"
+          srcset = "{% static 'home/assets/images/jardinier.jfif' %}"
+        />
+        <img class="service__image" src="{% static 'home/assets/images/téléchargement.jfif' %}" alt="">
+      </picture>
+      
+      <p class="service__title">Agent de securité </p>
     </div>
 
     <div class="box">
-      <img class="service__image" src="{% static 'home/assets/images/market.jfif' %}" alt="">
-      <h3 class="service__title">Gestion de projet </h3>
+      <picture >
+        <source 
+          type="image/webp"
+          srcset = "{% static 'home/assets/images/webp/market.webp' %}"
+        />
+        <source 
+          type="image/jfif"
+          srcset = "{% static 'home/assets/images/market.jfif' %}"
+        />
+        <img class="service__image" src="{% static 'home/assets/images/market.jfif' %}" alt="">
+      </picture>
+      <p class="service__title">Gestion de projet </p>
     </div>
 
     <div class="box">
-      <img class="service__image" src="{% static 'home/assets/images/informatique.jfif' %}" alt="">
-      <h3 class="service__title">Informatique</h3>
+      <picture >
+        <source 
+          type="image/webp"
+          srcset = "{% static 'home/assets/images/webp/informatique.webp' %}"
+        />
+        <source 
+          type="image/jfif"
+          srcset = "{% static 'home/assets/images/informatique.jfif' %}"
+        />
+        <img class="service__image" src="{% static 'home/assets/images/informatique.jfif' %}" alt="">
+      </picture>
+      <p class="service__title">Informatique</p>
     </div>
     <div class="box">
-      <img class="service__image" src="{% static 'home/assets/images/market2.jfif' %}" alt="">
-      <h3 class="service__title">Etude du marché </h3>
+      <picture >
+        <source 
+          type="image/webp"
+          srcset = "{% static 'home/assets/images/webp/market2.webp' %}"
+        />
+        <source 
+          type="image/jfif"
+          srcset = "{% static 'home/assets/images/market2.jfif' %}"
+        />
+        <img class="service__image" src="{% static 'home/assets/images/market2.jfif' %}" alt="">
+      </picture>
+      <p class="service__title">Etude du marché </p>
     </div>
 
 </div>
@@ -107,16 +170,124 @@
   <h1 class="heading">Notre <span class="heading--primary">Travail</span></h1>
 
   <div class="image_grid ">
-    <img src="{% static 'home/assets/images/cleaner.jfif' %}" alt="" data-aos="fade-right">
-    <img src="{% static 'home/assets/images/jardinier.jfif ' %}" alt="" data-aos="zoom-in-left">
-    <img src="{% static 'home/assets/images/m45.jpg' %}" alt="" data-aos="fade-right">
-    <img src="{% static 'home/assets/images/informatique2.jfif' %}" alt=""data-aos="zoom-in-left">
-    <img src="{% static 'home/assets/images//jardinier2.jfif'  %}" alt="" data-aos="fade-right">
-    <img src="{% static 'home/assets/images/images.jfif' %}" alt="" data-aos="zoom-in-left">
-    <img src="{% static 'home/assets/images/market.jfif' %}" alt="" data-aos="fade-right">
-    <img src="{% static 'home/assets/images/m46.jpg'  %}" alt="" data-aos="fade-right">
-    <img src="{% static 'home/assets/images/informatique.jfif'  %}" alt="" data-aos="zoom-in-left">
-    <img src="{% static 'home/assets/images/market2.jfif'  %}" alt="" data-aos="fade-right">
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/cleaner.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/cleaner.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/cleaner.jfif' %}" alt="" data-aos="fade-right">
+    </picture>
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/jardinier.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/jardinier.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/jardinier.jfif ' %}" alt="" data-aos="zoom-in-left">
+    </picture>
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/m45.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/m45.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/m45.jpg' %}" alt="" data-aos="fade-right">
+    </picture>
+    
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/informatique2.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/informatique2.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/informatique2.jfif' %}" alt=""data-aos="zoom-in-left">
+    </picture>
+
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/jardinier2.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/jardinier2.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images//jardinier2.jfif'  %}" alt="" data-aos="fade-right">
+    </picture>
+     
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/images.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/images.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/images.jfif' %}" alt="" data-aos="zoom-in-left">
+    </picture>
+
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/market.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/market.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/market.jfif' %}" alt="" data-aos="fade-right">
+    </picture>
+
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/m46.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/m46.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/m46.jpg'  %}" alt="" data-aos="fade-right">
+    </picture>
+
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/informatique.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/informatique.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/informatique.jfif'  %}" alt="" data-aos="zoom-in-left">
+    </picture>
+
+    <picture >
+      <source 
+        type="image/webp"
+        srcset = "{% static 'home/assets/images/webp/market2.webp' %}"
+      />
+      <source 
+        type="image/png"
+        srcset = "{% static 'home/assets/images/market2.jfif' %}"
+      />
+      <img src="{% static 'home/assets/images/market2.jfif'  %}" alt="" data-aos="fade-right">
+    </picture>
+
   </div>
 </section>
 

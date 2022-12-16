@@ -9,13 +9,43 @@
   <div class="swiper services-slider">
     <div class="swiper-wrapper">
       <div class="swiper-slide slide">
-        <img src="{% static 'home/assets/images/m43.jpg' %}" />
+        <picture >
+          <source 
+            type="image/webp"
+            srcset = "{% static 'home/assets/images/webp/m44.webp' %}"
+          />
+          <source 
+            type="image/png"
+            srcset = "{% static 'home/assets/images/m44.jpg' %}"
+          />
+          <img src="{% static 'home/assets/images/m44.jpg' %}" alt="" />
+        </picture>
       </div>
       <div class="swiper-slide slide">
-        <img src="{% static 'home/assets/images/m45.jpg' %}" />
+        <picture >
+          <source 
+            type="image/webp"
+            srcset = "{% static 'home/assets/images/webp/m45.webp' %}"
+          />
+          <source 
+            type="image/png"
+            srcset = "{% static 'home/assets/images/m45.jpg' %}"
+          />
+          <img src="{% static 'home/assets/images/m45.jpg' %}"  alt=""/>
+        </picture>
       </div>
       <div class="swiper-slide slide">
-        <img src="{% static 'home/assets/images/m42.jpg' %}" />
+        <picture >
+          <source 
+            type="image/webp"
+            srcset = "{% static 'home/assets/images/webp/m42.webp' %}"
+          />
+          <source 
+            type="image/png"
+            srcset = "{% static 'home/assets/images/m42.jpg' %}"
+          />
+          <img src="{% static 'home/assets/images/m42.jpg' %}"  alt=""/>
+        </picture>
       </div>
     </div>
 
